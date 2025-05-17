@@ -1,10 +1,23 @@
 {
   "name": "tommand",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "ftuttes init package",
   "main": "index.js",
+  "type": "module",
+  "bin": {
+    "tommand": "./dist/cli.mjs"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "npm run clean && npm run build:ts && npm run bundle && node src/tommand/modules/dev/addJsExtension.js",
+    "clean": "rimraf dist",
+    "build:ts": "tsc --build",
+    "bundle": "rollup -c",
+    "prepare": "npm run build",
+    "ot": "npm run build && npm link",
+    "start": "node dist/cli.mjs",
+    "--- COMMAND SECTION ---": "---",
+    "init": "npm run build && npm run start init",
+    "create-ftuttes": "npm run build && npm run start create-ftuttes"
   },
   "repository": {
     "type": "git",
@@ -18,5 +31,21 @@
   "bugs": {
     "url": "https://github.com/Rerurate514/fTutteS-Tommand/issues"
   },
-  "homepage": "https://github.com/Rerurate514/fTutteS-Tommand#readme"
+  "homepage": "https://github.com/Rerurate514/fTutteS-Tommand#readme",
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^28.0.3",
+    "@rollup/plugin-node-resolve": "^16.0.1",
+    "@rollup/plugin-terser": "^0.4.4",
+    "@rollup/plugin-typescript": "^12.1.2",
+    "@types/fs-extra": "^11.0.4",
+    "@types/node": "^22.15.18",
+    "rollup": "^4.40.2",
+    "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "commander": "^13.1.0",
+    "fs-extra": "^11.3.0",
+    "rimraf": "^6.0.1",
+    "tslib": "^2.8.1"
+  }
 }
