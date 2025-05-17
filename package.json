@@ -1,6 +1,6 @@
 {
   "name": "tommand",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "ftuttes init package",
   "main": "index.js",
   "type": "module",
