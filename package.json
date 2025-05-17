@@ -4,7 +4,7 @@
   "description": "ftuttes init package",
   "main": "index.js",
   "type": "module",
-    "bin": {
+  "bin": {
     "tommand": "./dist/cli.mjs"
   },
   "scripts": {
@@ -36,11 +36,13 @@
     "@rollup/plugin-node-resolve": "^16.0.1",
     "@rollup/plugin-terser": "^0.4.4",
     "@rollup/plugin-typescript": "^12.1.2",
+    "@types/fs-extra": "^11.0.4",
     "@types/node": "^22.15.18",
     "rollup": "^4.40.2",
     "typescript": "^5.8.3"
   },
   "dependencies": {
+    "fs-extra": "^11.3.0",
     "rimraf": "^6.0.1",
     "tslib": "^2.8.1"
   }
