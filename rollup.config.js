@@ -12,7 +12,7 @@ const nodeExternals = [
 ];
 
 const cliConfig = {
-    input: 'dist/tommand/index.js',
+    input: 'dist/index.js',
     output: {
         file: 'dist/cli.mjs',
         format: 'es',
