@@ -18,5 +18,17 @@
   "bugs": {
     "url": "https://github.com/Rerurate514/fTutteS-Tommand/issues"
   },
-  "homepage": "https://github.com/Rerurate514/fTutteS-Tommand#readme"
+  "homepage": "https://github.com/Rerurate514/fTutteS-Tommand#readme",
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^28.0.3",
+    "@rollup/plugin-node-resolve": "^16.0.1",
+    "@rollup/plugin-terser": "^0.4.4",
+    "@rollup/plugin-typescript": "^12.1.2",
+    "@types/node": "^22.15.18",
+    "rollup": "^4.40.2",
+    "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "tslib": "^2.8.1"
+  }
 }
