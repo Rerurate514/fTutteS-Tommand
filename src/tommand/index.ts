@@ -8,7 +8,7 @@ const program = new Command();
 program
     .name("tommand")
     .description("setup ftuttes project")
-    .version("1.0.1");
+    .version("1.0.2");
 
 program.addCommand(createFtuttesCommand);
 

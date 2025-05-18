@@ -14,6 +14,7 @@
 
 ## 概要
 このライブラリは https://www.npmjs.com/package/ftuttes (https://github.com/Rerurate514/fTutteS) のセットアップコマンドを含むnpmパッケージです。
+- latest version -> tommand@1.0.2
 
 ## 使い方
 `fTutteS`プロジェクトを作成したい場所で以下のコマンドを打ちます。
