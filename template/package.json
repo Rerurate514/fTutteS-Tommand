@@ -4,10 +4,15 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "build": "rollup -c"
+    "build": "npm run clean && npm run build:ts && npm run bundle",
+    "clean": "rimraf dist",
+    "build:ts": "tsc --build",
+    "bundle": "rollup -c",
+    "prepare": "npm run build",
+    "ot": "npm run build && npm link"
   },
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "description": "",
   "dependencies": {
     "ftuttes": "*",
@@ -19,6 +24,7 @@
     "@rollup/plugin-node-resolve": "^16.0.1",
     "@rollup/plugin-terser": "^0.4.4",
     "@rollup/plugin-typescript": "^12.1.2",
-    "rollup": "^4.40.2"
+    "rollup": "^4.40.2",
+    "rimraf": "^4.4.1"
   }
 }
