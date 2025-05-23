@@ -14,12 +14,17 @@
 
 ## 概要
 このライブラリは https://www.npmjs.com/package/ftuttes (https://github.com/Rerurate514/fTutteS) のセットアップコマンドを含むnpmパッケージです。
-- latest version -> tommand@1.0.4
+- latest version -> tommand@1.1.4
 
 ## 使い方
 `fTutteS`プロジェクトを作成したい場所で以下のコマンドを打ちます。
 ```shell
 npx tommand create-ftuttes 任意のプロジェクト名
+```
+
+[Transitus](https://www.npmjs.com/package/transitus)プロジェクトの場合は以下。
+```shell
+npx tommand create-transitus-ftuttes 任意のプロジェクト名
 ```
 
 これだけ！
