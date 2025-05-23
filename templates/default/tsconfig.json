@@ -53,7 +53,7 @@
         "skipLibCheck": false
     },
     "include": [
-        "default/src/**/*",
+        "src/**/*",
         "*.ts"
     ],
     "exclude": [
