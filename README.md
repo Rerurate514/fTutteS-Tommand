@@ -16,7 +16,7 @@
 ## Overview
 This npm package contains setup commands for [ftuttes](https://www.npmjs.com/package/ftuttes) ([GitHub repository](https://github.com/Rerurate514/fTutteS)).
 
-- latest version -> tommand@1.0.4
+- latest version -> tommand@1.1.0
 
 ## Usage
 To create a new `fTutteS` project, run the following command in the location where you want to create your project:
@@ -33,6 +33,14 @@ That's it!
 npx tommand create-ftuttes your-project-name
 ```
 This command creates a new fTutteS project with the specified name, copies the necessary template files, and installs all dependencies.
+
+### Create a new project with transitus
+```shell
+npx tommand create-transitus-ftuttes your-project-name
+```
+This command creates a new fTutteS-Transitus project with the specified name, copies the necessary template files, and installs all dependencies.
+URL: [Transitus](https://www.npmjs.com/package/transitus)
+
 
 ## License
 MIT

@@ -7,8 +7,8 @@ import fse from "fs-extra";
 import { execSync } from "child_process";
 import { fileURLToPath } from 'url';
 
-export const createFtuttesCommand = new Command('create-ftuttes')
-    .description('Create a new ftuttes project')
+export const createTransitusCommand = new Command('create-transitus-ftuttes')
+    .description('Create a new ftuttes project with transitus')
     .argument('<project-name>', 'Name of the project')
     .action((projectName: string) => {
         const projectPath = path.resolve(process.cwd(), projectName);
@@ -22,7 +22,7 @@ export const createFtuttesCommand = new Command('create-ftuttes')
 
         const __dirname = path.dirname(__filename);
 
-        const templatePath = path.resolve(__dirname, "../template", "default");
+        const templatePath = path.resolve(__dirname, "../template", "withTransitus");
 
         fse.copySync(templatePath, projectPath);
 
