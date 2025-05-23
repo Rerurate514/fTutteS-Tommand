@@ -2,6 +2,7 @@
 
 import { Command } from 'commander';
 import { createFtuttesCommand } from './modules/commands/create-ftuttes';
+import { createTransitusCommand } from './modules/commands/create-transitus-ftuttes';
 
 const program = new Command();
 
@@ -11,6 +12,7 @@ program
     .version("1.0.3");
 
 program.addCommand(createFtuttesCommand);
+program.addCommand(createTransitusCommand);
 
 program.parse(process.argv);
 
