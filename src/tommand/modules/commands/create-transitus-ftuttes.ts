@@ -22,7 +22,7 @@ export const createTransitusCommand = new Command('create-transitus-ftuttes')
 
         const __dirname = path.dirname(__filename);
 
-        const templatePath = path.resolve(__dirname, "../template", "withTransitus");
+        const templatePath = path.resolve(__dirname, "../templates", "withTransitus");
 
         fse.copySync(templatePath, projectPath);
 

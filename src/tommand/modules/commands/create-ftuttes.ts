@@ -22,7 +22,7 @@ export const createFtuttesCommand = new Command('create-ftuttes')
 
         const __dirname = path.dirname(__filename);
 
-        const templatePath = path.resolve(__dirname, "../template", "default");
+        const templatePath = path.resolve(__dirname, "../templates", "default");
 
         fse.copySync(templatePath, projectPath);
 
