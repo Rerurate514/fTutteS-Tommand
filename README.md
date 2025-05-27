@@ -16,7 +16,7 @@
 ## Overview
 This npm package contains setup commands for [ftuttes](https://www.npmjs.com/package/ftuttes) ([GitHub repository](https://github.com/Rerurate514/fTutteS)).
 
-- latest version -> tommand@1.1.1
+- latest version -> tommand@1.1.2
 
 ## Usage
 To create a new `fTutteS` project, run the following command in the location where you want to create your project:
