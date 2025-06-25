@@ -4,13 +4,16 @@ import commonjs from '@rollup/plugin-commonjs';
 import terser from '@rollup/plugin-terser';
 
 const bun = {
-    input: 'src/script.ts',
+    input: 'dist/script.js',
     output: [
         {
             file: 'dist/bundle.js',
             format: 'umd',
             name: 'MyApp',
             sourcemap: true,
+            globals: {
+                ftuttes: 'ftuttes', 
+            }
         },
         {
             file: 'dist/bundle.esm.js',
@@ -19,11 +22,27 @@ const bun = {
         },
     ],
     plugins: [
-        typescript(),
+        typescript({
+            declaration: false,
+            compilerOptions: {
+                target: 'esnext',
+                module: 'esnext',
+            },
+            transformers: [
+                service => ({
+                    before: [
+                        context => node => {
+                            return node;
+                        }
+                    ],
+                    after: []
+                })
+            ]
+        }),
+        commonjs(),
         nodeResolve({
             browser: true,
         }),
-        commonjs(),
         terser({
             compress: {
                 dead_code: true,
@@ -44,7 +63,7 @@ const bun = {
 };
 
 const run = {
-    input: 'src/run.ts',
+    input: 'dist/run.js',
     output: [
         {
             file: 'dist/run.esm.js',
