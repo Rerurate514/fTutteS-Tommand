@@ -9,7 +9,7 @@ const program = new Command();
 program
     .name("tommand")
     .description("setup ftuttes project")
-    .version("1.1.4");
+    .version("1.2.0");
 
 program.addCommand(createFtuttesCommand);
 program.addCommand(createTransitusCommand);
