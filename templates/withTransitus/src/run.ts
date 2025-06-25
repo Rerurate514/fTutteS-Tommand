@@ -1,7 +1,10 @@
-import { TransitusServer } from "transitus";
+import { TransitusServer, DefaultRequestHandler } from "transitus";
 
 function runTransitusServer(){
-    const server = new TransitusServer("index.html");
+    const server = new TransitusServer([
+        new DefaultRequestHandler("index.html")
+    ]);
+
     server.run();
 }
 
