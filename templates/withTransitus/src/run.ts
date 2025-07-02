@@ -1,11 +1,20 @@
-import { TransitusServer, DefaultRequestHandler } from "transitus";
+import { DefaultRequestHandler, HotReload, TransitusServer } from "transitus";
 
-function runTransitusServer(){
-    const server = new TransitusServer([
-        new DefaultRequestHandler("index.html")
-    ]);
+process.env.NODE_ENV = "development";
 
-    server.run();
-}
+const middlewares = [
+    new DefaultRequestHandler("index.html"),
+];
 
-runTransitusServer();
+const settings = [
+    new HotReload({
+        watchPaths: ["./src", "./config", "./public"],
+        excludePatterns: ["node_modules", "dist", ".git", "*.log", "*.tmp"],
+        debounceMs: 500,
+        enabled: process.env.NODE_ENV === "development"
+    }),
+];
+
+const server = new TransitusServer(middlewares, settings);
+
+server.run();
