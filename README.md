@@ -1,5 +1,5 @@
 # fTutteS-Tommand
-日本語版はこちら -> https://github.com/Rerurate514/fTutteS/blob/main/README-ja.md
+日本語版はこちら -> https://github.com/Rerurate514/fTutteS-Tommand/blob/main/README-ja.md
 
 ![NPM Version](https://img.shields.io/npm/v/tommand)
 ![NPM Unpacked Size : mjs and js](https://img.shields.io/npm/unpacked-size/tommand)
@@ -16,7 +16,7 @@
 ## Overview
 This npm package contains setup commands for [ftuttes](https://www.npmjs.com/package/ftuttes) ([GitHub repository](https://github.com/Rerurate514/fTutteS)).
 
-- latest version -> tommand@1.3.0
+- latest version -> tommand@1.3.1
 
 ## Usage
 To create a new `fTutteS` project, run the following command in the location where you want to create your project:
