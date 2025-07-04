@@ -22,23 +22,6 @@ const bun = {
         },
     ],
     plugins: [
-        typescript({
-            declaration: false,
-            compilerOptions: {
-                target: 'esnext',
-                module: 'esnext',
-            },
-            transformers: [
-                service => ({
-                    before: [
-                        context => node => {
-                            return node;
-                        }
-                    ],
-                    after: []
-                })
-            ]
-        }),
         commonjs(),
         nodeResolve({
             browser: true,
@@ -47,7 +30,8 @@ const bun = {
             compress: {
                 dead_code: true,
                 conditionals: true,
-                collapse_vars: true
+                collapse_vars: true,
+                reduce_vars: false
             },
             mangle: {
                 keep_classnames: true,
